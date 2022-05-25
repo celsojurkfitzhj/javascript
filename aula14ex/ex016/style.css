@@ -1,0 +1,47 @@
+@charset 'UTF-8';
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: rgb(15, 70, 173);
+    font: normal 1.2em Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 2px 3px rgba(0, 0, 0, 0.61);
+}
+
+div > p{
+    padding: 5px 0px 13px 5px;
+}
+
+div > input{
+    margin-top: 5px;
+    padding: 5px;
+    width: 70px;
+}
+
+div#resultado{
+    margin-top: 30px;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-top: 30px;
+}
