@@ -38,6 +38,14 @@ div#container{
     flex-direction: column;
 }
 
+div#container > select{
+    width: 200px;
+}
+
+input#button{
+    width: 85px;
+}
+
 footer{
     color: white;
     text-align: center;
