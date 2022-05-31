@@ -45,6 +45,9 @@ div#container > select{
 input#button{
     width: 85px;
 }
+ div#res > p{
+     padding: 6px;
+ }
 
 footer{
     color: white;

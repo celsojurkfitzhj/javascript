@@ -18,8 +18,9 @@ function adicionar() {
         item.text = `O valor ${num} foi adcionado`
         selnum.appendChild(item)
         anum.push(num)
-        anum.sort()
     }
+    txtnum.value = ''
+    txtnum.focus()
 }
 
 function analisar() {
@@ -28,15 +29,26 @@ function analisar() {
     } else {
 
         let soma = 0
+        let menor = anum[0]
+        let maior = anum[0]
 
+        for(let pos in anum){
+            if(anum[pos] > maior){
+            maior = anum[pos]
+            }
+            if(anum[pos] < menor){
+            menor = anum[pos]
+            }
+        }
         for (let c = 0; c <= anum.length - 1; c++) {
-            soma = soma + anum[c]
+            soma += anum[c]
         }
 
-        res.innerHTML = `Ao todo temos ${anum.length} números cadastrados<br>`
-        res.innerHTML += `O maior valor foi ${anum[anum.length - 1]}<br>`
-        res.innerHTML += `O menor valor foi ${anum[0]}<br>`
-        res.innerHTML += `Somando todos os valores, temos ${soma}<br>`
-        res.innerHTML += `A media do valores é ${soma / anum.length}<br>`
+        res.innerHTML = `<p>Ao todo temos ${anum.length} números cadastrados<br></p>`
+        res.innerHTML += `<p>O maior valor foi ${maior}<br></p>`
+        res.innerHTML += `<p>O menor valor foi ${menor}<br></p>`
+        res.innerHTML += `<p>Somando todos os valores, temos ${soma}<br></p>`
+        res.innerHTML += `<p>A media do valores é ${soma / anum.length}<br></p>`
     }
 }
+
